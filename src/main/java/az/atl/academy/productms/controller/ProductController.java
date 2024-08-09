@@ -27,12 +27,12 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<ProductResponseDto> findAll(){
-        return productService.findAllAuthors();
+    public List<ProductResponseDto> findAllProducts(){
+        return productService.findAllProducts();
     }
 
     @PutMapping
-    public void updateAuthor (@RequestBody ProductRequestDto productRequestDto, @PathVariable Long id){
-        productService.updateAuthor(productRequestDto, id);
+    public void updateProduct (@RequestBody ProductRequestDto productRequestDto, @PathVariable Long id){
+        productService.updateProduct(productRequestDto, id);
     }
 }

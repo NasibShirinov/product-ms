@@ -6,8 +6,8 @@ import az.atl.academy.productms.model.responseDto.ProductResponseDto;
 import java.util.List;
 
 public interface ProductService {
-    ProductResponseDto createProduct(ProductRequestDto authorRequestDto);
+    ProductResponseDto createProduct(ProductRequestDto productRequestDto);
     ProductResponseDto findById(Long id);
-    List<ProductResponseDto> findAllAuthors();
-    void updateAuthor(ProductRequestDto authorRequestDto, Long id);
+    List<ProductResponseDto> findAllProducts();
+    void updateProduct(ProductRequestDto productRequestDto, Long id);
 }

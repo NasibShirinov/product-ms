@@ -34,14 +34,14 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductResponseDto> findAllAuthors() {
+    public List<ProductResponseDto> findAllProducts() {
         return productRepository.findAll()
                 .stream().map(productMapper :: toDto)
                 .toList();
     }
 
     @Override
-    public void updateAuthor(ProductRequestDto productRequestDto, Long id) {
+    public void updateProduct(ProductRequestDto productRequestDto, Long id) {
         ProductEntity productEntity = productMapper.toEntity(productRequestDto);
         productEntity.setId(id);
         productRepository.save(productEntity);
